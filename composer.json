@@ -1,5 +1,5 @@
 {
-    "name": "sred/zf2Languages",
+    "name": "sred/zf2languages",
     "description": "Open plugin for using multilanguage on ZF2 applications",
     "license": "GPL3",
     "authors": [
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-0": {
-          "zf2Languages": "vendor/sred/"
+          "zf2languages": "vendor/sred/"
         }
   }
 }
