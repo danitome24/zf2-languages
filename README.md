@@ -14,7 +14,7 @@ To install this module you must follow this steps:
 
 ```php
 "require": {
-        "sred/i18nplugin" : "dev-master"
+        "sred/zf2Languages" : "dev-master"
     },
 ```
     and
@@ -22,7 +22,7 @@ To install this module you must follow this steps:
 ```php
 "autoload": {
       "psr-4":{
-         "i18nplugin\\" : "vendor/sred/i18nplugin"
+         "zf2Languages\\" : "vendor/sred/zf2Languages"
       }
 }
 ```
@@ -34,7 +34,7 @@ To install this module you must follow this steps:
 4 - And the last one step is adding the module to your `application.conf.php`
 ```php
     'modules' => array(
-        'i18nplugin',
+        'zf2Languages',
     ),
 ```
 

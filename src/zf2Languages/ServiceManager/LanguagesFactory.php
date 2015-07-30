@@ -1,6 +1,6 @@
 <?php
 /**
- * i18nPlugin: Open plugin for using multilanguage on ZF2 applications
+ * zf2Languages: Open plugin for using multilanguage on ZF2 applications
  * Copyright (C) 2015 SREd Servei de Recursos Educatius <http://www.sre.urv.cat/>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -21,41 +21,22 @@
  * @author Daniel Tomé <danieltomefer@gmail.com>
  * @copyright 2015 Servei de Recursos Educatius (http://www.sre.urv.cat)
  */
-namespace i18nPlugin\Mvc\Controller\Plugin;
 
-use Zend\Mvc\Controller\Plugin\AbstractPlugin;
+namespace zf2Languages\ServiceManager;
+
+use i18nPlugin\Languages\Languages;
+use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
-use Zend\ServiceManager\ServiceLocatorAwareInterface;
 
-class Languages extends AbstractPlugin implements ServiceLocatorAwareInterface
+class LanguagesFactory implements FactoryInterface
 {
-
-    private $instance;
-    private $serviceLocator;
-
     /**
-     * Method to return an instance of Languages
-     * @return \i18nPlugin\Languages\Languages
+     * Method to create a Language instance.
+     * @param ServiceLocatorInterface $serviceLocator
+     * @return \zf2Languages\Languages\Languages
      */
-    public function __invoke()
-    {
-        if (empty($this->instance)) {
-            $sm = $this->getServiceLocator()->getServiceLocator();
-            $this->instance = $sm->get('Languages');
-        }
+    public function createService(ServiceLocatorInterface $serviceLocator) {
 
-        return $this->instance;
+        return new Languages($serviceLocator->get('Config'));
     }
-
-    public function setServiceLocator(ServiceLocatorInterface $serviceLocator)
-    {
-        $this->serviceLocator = $serviceLocator;
-        return $this;
-    }
-
-    public function getServiceLocator()
-    {
-        return $this->serviceLocator;
-    }
-
 }

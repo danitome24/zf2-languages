@@ -1,6 +1,6 @@
 <?php
 /**
- * i18nPlugin: Open plugin for using multilanguage on ZF2 applications
+ * zf2Languages: Open plugin for using multilanguage on ZF2 applications
  * Copyright (C) 2015 SREd Servei de Recursos Educatius <http://www.sre.urv.cat/>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -24,22 +24,22 @@
 return array(
     'controllers' => array(
         'invokables' => array(
-            'index' => 'i18nPlugin\Controller\IndexController'
+            'index' => 'zf2Languages\Controller\IndexController'
         ),
     ),
     'service_manager' => array(
         'factories' => array(
-            'Languages' => 'i18nPlugin\ServiceManager\LanguagesFactory',
+            'Languages' => 'zf2Languages\ServiceManager\LanguagesFactory',
         )
     ),
     'controller_plugins' => array(
         'invokables' => array(
-            'languages' => 'i18nPlugin\Mvc\Controller\Plugin\Languages',
+            'languages' => 'zf2Languages\Mvc\Controller\Plugin\Languages',
         ),
     ),
     'view_helpers' => array(
         'invokables' => array(
-            'languages' => 'i18nPlugin\View\Helper\Languages',
+            'languages' => 'zf2Languages\View\Helper\Languages',
         ),
     ),
 );

@@ -1,5 +1,5 @@
 {
-    "name": "sred/i18nplugin",
+    "name": "sred/zf2Languages",
     "description": "Open plugin for using multilanguage on ZF2 applications",
     "license": "GPL3",
     "authors": [
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-0": {
-          "i18nplugin": "vendor/sred/"
+          "zf2Languages": "vendor/sred/"
         }
   }
 }
