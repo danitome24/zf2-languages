@@ -24,7 +24,7 @@
 
 namespace zf2Languages\ServiceManager;
 
-use i18nPlugin\Languages\Languages;
+use zf2Languages\Languages\Languages;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 

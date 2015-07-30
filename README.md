@@ -14,7 +14,7 @@ To install this module you must follow this steps:
 
 ```php
 "require": {
-        "sred/zf2Languages" : "dev-master"
+        "sred/zf2languages" : "dev-master"
     },
 ```
     and
@@ -22,7 +22,7 @@ To install this module you must follow this steps:
 ```php
 "autoload": {
       "psr-4":{
-         "zf2Languages\\" : "vendor/sred/zf2Languages"
+         "zf2languages\\" : "vendor/sred/zf2languages"
       }
 }
 ```
@@ -34,7 +34,7 @@ To install this module you must follow this steps:
 4 - And the last one step is adding the module to your `application.conf.php`
 ```php
     'modules' => array(
-        'zf2Languages',
+        'zf2languages',
     ),
 ```
 
