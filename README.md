@@ -1,8 +1,40 @@
+/**
+ * zf2Languages: Open plugin for using multilanguage on ZF2 applications
+ * Copyright (C) 2015 SREd Servei de Recursos Educatius <http://www.sre.urv.cat/>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+/**
+ * @author Daniel Tomé <danieltomefer@gmail.com>
+ * @copyright 2015 Servei de Recursos Educatius (http://www.sre.urv.cat)
+ */
+
+
+Author:
+-------
+
+Daniel Tomé Fernández (danieltomefer@gmail.com) as a worker on SREd (http://www.sre.urv.cat/)
+
+
+
 Introduction:
 -------------
 
 This plugin help us using multilanguage on our Zend Framework 2 application. It provides us
 an API and a config. This config will be fundamental for correct working.
+
 
 
 Installation:
@@ -29,14 +61,6 @@ To install this module you must follow this steps:
 
 2 - Then you must run the following command line: `composer update`
 
-3 - Also run the command `composer dump-autoload`.
-
-4 - And the last one step is adding the module to your `application.conf.php`
-```php
-    'modules' => array(
-        'zf2languages',
-    ),
-```
 
 Configuration:
 --------------
@@ -64,6 +88,13 @@ To use this plugin you must make a config like the following:
 In `all` array you must have the key and the translation of this key. For example: 'en' => 'English'.
 In `default` language you must have the key of the default language.
 In `browser` array you must have defined if you want to get language from browser configuration or not.
+
+And the last step is adding the module to your module's configuration `application.conf.php`:
+```php
+    'modules' => array(
+        'zf2languages',
+    ),
+```
 
 
 
